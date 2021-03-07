@@ -117,6 +117,9 @@ body {
   background-size: 40% 50%, 80% 80%;
   background-position: top 0 left 0, bottom 0 right 0;
   background-repeat: no-repeat; }
+  @media only screen and (max-width: 72.5em) {
+    body {
+      background-size: 40% 20%, 80% 20%; } }
   @media only screen and (max-width: 37.5em) {
     body {
       background-image: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg");
