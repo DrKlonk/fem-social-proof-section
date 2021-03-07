@@ -1,0 +1,40 @@
+.rating {
+  background-color: $color-gray-magenta-light;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+
+  @include respond(tab-land) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @include respond(tab-port) {
+    margin: 1rem 0;
+  }
+
+  @include respond(phone) {
+    width: 100%;
+  }
+
+  &:nth-child(n) {
+    align-self: flex-start;
+  }
+  &:nth-child(2n) {
+    align-self: center;
+  }
+  &:nth-child(3n) {
+    align-self: flex-end;
+  }
+
+  &__stars {
+    @include respond(tab-land) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__text {
+    font-weight: 700;
+  }
+}

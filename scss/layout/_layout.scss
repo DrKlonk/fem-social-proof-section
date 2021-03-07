@@ -1,0 +1,72 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-box {
+  flex-grow: 1;
+  margin: 5rem 0;
+  min-height: 80vh;
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 25rem 1fr;
+  grid-template-rows: 20rem 1fr;
+  gap: 2rem 4rem;
+
+  @include respond(phone) {
+    width: 90vw;
+  }
+
+  grid-template-areas:
+    "header ratings"
+    "testimonials testimonials";
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "header"
+      "ratings"
+      "testimonials";
+    margin-bottom: 3rem;
+  }
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ratings {
+  grid-area: ratings;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 10%;
+
+  @include respond(tab-land) {
+    padding: 0;
+  }
+
+  @include respond(phone) {
+    padding: 0;
+  }
+}
+
+.testimonials {
+  grid-area: testimonials;
+  display: flex;
+  justify-content: space-between;
+  min-height: 20rem;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+}
+
+.attribution {
+  padding: 1rem;
+}

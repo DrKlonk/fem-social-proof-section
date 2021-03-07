@@ -1,0 +1,23 @@
+body {
+  font-family: "Spartan", "Arial", "sans serif";
+}
+
+.heading-primary {
+  font-size: 3rem;
+  line-height: 3rem;
+  color: $color-primary;
+
+  @include respond(phone) {
+    text-align: center;
+  }
+}
+
+.heading-subtext {
+  margin-top: 3rem;
+  color: $color-primary;
+  line-height: 1.5rem;
+
+  @include respond(phone) {
+    text-align: center;
+  }
+}
