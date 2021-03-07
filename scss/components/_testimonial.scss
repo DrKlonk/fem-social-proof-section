@@ -9,6 +9,7 @@
 
   &:first-child {
     align-self: flex-start;
+
     @include respond(tab-port) {
       margin-top: 0;
     }
